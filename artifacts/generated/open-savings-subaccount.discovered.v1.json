@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "1.0",
+  "identity": {
+    "id": "legacycore.open-savings-subaccount.discovered",
+    "name": "Open Savings Sub-Account (Discovered)",
+    "version": "1.0.0",
+    "description": "Capability artifact compiled from a genuine LLM discovery trace."
+  },
+  "compatibility": {
+    "application": "LegacyCore",
+    "surface": "web",
+    "vendor": "demo"
+  },
+  "contract": {
+    "inputs": {
+      "memberId": {
+        "type": "string",
+        "required": true,
+        "sensitive": true
+      },
+      "product": {
+        "type": "enum",
+        "required": true,
+        "values": [
+          "SAVINGS",
+          "CHECKING"
+        ]
+      },
+      "openingDeposit": {
+        "type": "decimal",
+        "required": true,
+        "minimum": 0
+      }
+    },
+    "outputs": {
+      "confirmationId": {
+        "type": "string"
+      }
+    },
+    "businessOutcomes": [
+      {
+        "code": "MEMBER_NOT_FOUND",
+        "description": "The supplied member ID does not exist."
+      },
+      {
+        "code": "ACCOUNT_RESTRICTED",
+        "description": "The member exists but is not permitted to open a new sub-account."
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "discovered.01.click",
+      "phase": "search_member",
+      "action": {
+        "type": "click"
+      },
+      "target": {
+        "strategies": [
+          {
+            "type": "text",
+            "value": "CONFIRM OPEN"
+          }
+        ]
+      },
+      "risk": "irreversible"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "confirmationId",
+      "extract": {
+        "type": "text",
+        "target": {
+          "strategies": [
+            {
+              "type": "attribute",
+              "name": "id",
+              "value": "confirmation_value"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "successCheckpoint": {
+    "all": [
+      {
+        "type": "text_visible",
+        "value": "ACCOUNT OPENED"
+      },
+      {
+        "type": "text_visible",
+        "value": "TRANSACTION COMPLETE"
+      },
+      {
+        "type": "text_matches_input",
+        "label": "Member",
+        "input": "memberId"
+      }
+    ]
+  }
+}

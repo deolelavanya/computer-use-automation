@@ -1,0 +1,592 @@
+{
+  "generatedAt": "2026-08-20T02:12:39.497Z",
+  "provider": "scripted-test-provider",
+  "genuineLlmDiscovery": false,
+  "sessionId": "pw-1787191956857",
+  "result": {
+    "kind": "failure",
+    "goal": "Discover how to open a SAVINGS sub-account for member 12345 with an opening deposit of 25, but do not execute CONFIRM OPEN.",
+    "steps": [
+      {
+        "index": 0,
+        "observation": {
+          "url": "http://localhost:4173/search",
+          "title": "Member Search",
+          "visibleText": "LEGACYCORE MEMBER SERVICING CONSOLE\nSESSION: ACTIVE\nMEMBER MAINTENANCE\nMember Number:\t\n\nEnter member number and select FIND.\n\nF1 Help   F9 Menu   F12 Exit"
+        },
+        "decision": {
+          "reasoningSummary": "Enter the member number so the existing member can be found.",
+          "action": {
+            "type": "fill",
+            "value": "12345",
+            "target": {
+              "strategies": [
+                {
+                  "type": "label",
+                  "value": "Member Number"
+                },
+                {
+                  "type": "attribute",
+                  "name": "name",
+                  "value": "fld_104"
+                }
+              ]
+            }
+          }
+        },
+        "success": true
+      },
+      {
+        "index": 1,
+        "observation": {
+          "url": "http://localhost:4173/search",
+          "title": "Member Search",
+          "visibleText": "LEGACYCORE MEMBER SERVICING CONSOLE\nSESSION: ACTIVE\nMEMBER MAINTENANCE\nMember Number:\t\n\nEnter member number and select FIND.\n\nF1 Help   F9 Menu   F12 Exit"
+        },
+        "decision": {
+          "reasoningSummary": "Submit the member search.",
+          "action": {
+            "type": "click",
+            "target": {
+              "strategies": [
+                {
+                  "type": "role",
+                  "role": "button",
+                  "name": "FIND"
+                },
+                {
+                  "type": "text",
+                  "value": "FIND"
+                }
+              ]
+            }
+          }
+        },
+        "success": true
+      },
+      {
+        "index": 2,
+        "observation": {
+          "url": "http://localhost:4173/member/12345",
+          "title": "Member Detail",
+          "visibleText": "LEGACYCORE MEMBER SERVICING CONSOLE\nSESSION: ACTIVE\nMEMBER DETAIL\nMember #\t12345\nName\tAlice Carter\nStatus\tACTIVE\nF2 ACCOUNTS\nF4 HISTORY\nF8 NOTES\nF1 Help   F9 Menu   F12 Exit"
+        },
+        "decision": {
+          "reasoningSummary": "Open the workflow for creating a new sub-account.",
+          "action": {
+            "type": "click",
+            "target": {
+              "strategies": [
+                {
+                  "type": "role",
+                  "role": "button",
+                  "name": "OPEN NEW SUB-ACCOUNT"
+                },
+                {
+                  "type": "text",
+                  "value": "OPEN NEW SUB-ACCOUNT"
+                }
+              ]
+            }
+          }
+        },
+        "success": false,
+        "error": "TARGET_NOT_FOUND"
+      },
+      {
+        "index": 3,
+        "observation": {
+          "url": "http://localhost:4173/member/12345",
+          "title": "Member Detail",
+          "visibleText": "LEGACYCORE MEMBER SERVICING CONSOLE\nSESSION: ACTIVE\nMEMBER DETAIL\nMember #\t12345\nName\tAlice Carter\nStatus\tACTIVE\nF2 ACCOUNTS\nF4 HISTORY\nF8 NOTES\nF1 Help   F9 Menu   F12 Exit"
+        },
+        "decision": {
+          "reasoningSummary": "Open the workflow for creating a new sub-account.",
+          "action": {
+            "type": "click",
+            "target": {
+              "strategies": [
+                {
+                  "type": "role",
+                  "role": "button",
+                  "name": "OPEN NEW SUB-ACCOUNT"
+                },
+                {
+                  "type": "text",
+                  "value": "OPEN NEW SUB-ACCOUNT"
+                }
+              ]
+            }
+          }
+        },
+        "success": false,
+        "error": "TARGET_NOT_FOUND"
+      },
+      {
+        "index": 4,
+        "observation": {
+          "url": "http://localhost:4173/member/12345",
+          "title": "Member Detail",
+          "visibleText": "LEGACYCORE MEMBER SERVICING CONSOLE\nSESSION: ACTIVE\nMEMBER DETAIL\nMember #\t12345\nName\tAlice Carter\nStatus\tACTIVE\nF2 ACCOUNTS\nF4 HISTORY\nF8 NOTES\nF1 Help   F9 Menu   F12 Exit"
+        },
+        "decision": {
+          "reasoningSummary": "Open the workflow for creating a new sub-account.",
+          "action": {
+            "type": "click",
+            "target": {
+              "strategies": [
+                {
+                  "type": "role",
+                  "role": "button",
+                  "name": "OPEN NEW SUB-ACCOUNT"
+                },
+                {
+                  "type": "text",
+                  "value": "OPEN NEW SUB-ACCOUNT"
+                }
+              ]
+            }
+          }
+        },
+        "success": false,
+        "error": "TARGET_NOT_FOUND"
+      },
+      {
+        "index": 5,
+        "observation": {
+          "url": "http://localhost:4173/member/12345",
+          "title": "Member Detail",
+          "visibleText": "LEGACYCORE MEMBER SERVICING CONSOLE\nSESSION: ACTIVE\nMEMBER DETAIL\nMember #\t12345\nName\tAlice Carter\nStatus\tACTIVE\nF2 ACCOUNTS\nF4 HISTORY\nF8 NOTES\nF1 Help   F9 Menu   F12 Exit"
+        },
+        "decision": {
+          "reasoningSummary": "Open the workflow for creating a new sub-account.",
+          "action": {
+            "type": "click",
+            "target": {
+              "strategies": [
+                {
+                  "type": "role",
+                  "role": "button",
+                  "name": "OPEN NEW SUB-ACCOUNT"
+                },
+                {
+                  "type": "text",
+                  "value": "OPEN NEW SUB-ACCOUNT"
+                }
+              ]
+            }
+          }
+        },
+        "success": false,
+        "error": "TARGET_NOT_FOUND"
+      },
+      {
+        "index": 6,
+        "observation": {
+          "url": "http://localhost:4173/member/12345",
+          "title": "Member Detail",
+          "visibleText": "LEGACYCORE MEMBER SERVICING CONSOLE\nSESSION: ACTIVE\nMEMBER DETAIL\nMember #\t12345\nName\tAlice Carter\nStatus\tACTIVE\nF2 ACCOUNTS\nF4 HISTORY\nF8 NOTES\nF1 Help   F9 Menu   F12 Exit"
+        },
+        "decision": {
+          "reasoningSummary": "Open the workflow for creating a new sub-account.",
+          "action": {
+            "type": "click",
+            "target": {
+              "strategies": [
+                {
+                  "type": "role",
+                  "role": "button",
+                  "name": "OPEN NEW SUB-ACCOUNT"
+                },
+                {
+                  "type": "text",
+                  "value": "OPEN NEW SUB-ACCOUNT"
+                }
+              ]
+            }
+          }
+        },
+        "success": false,
+        "error": "TARGET_NOT_FOUND"
+      },
+      {
+        "index": 7,
+        "observation": {
+          "url": "http://localhost:4173/member/12345",
+          "title": "Member Detail",
+          "visibleText": "LEGACYCORE MEMBER SERVICING CONSOLE\nSESSION: ACTIVE\nMEMBER DETAIL\nMember #\t12345\nName\tAlice Carter\nStatus\tACTIVE\nF2 ACCOUNTS\nF4 HISTORY\nF8 NOTES\nF1 Help   F9 Menu   F12 Exit"
+        },
+        "decision": {
+          "reasoningSummary": "Open the workflow for creating a new sub-account.",
+          "action": {
+            "type": "click",
+            "target": {
+              "strategies": [
+                {
+                  "type": "role",
+                  "role": "button",
+                  "name": "OPEN NEW SUB-ACCOUNT"
+                },
+                {
+                  "type": "text",
+                  "value": "OPEN NEW SUB-ACCOUNT"
+                }
+              ]
+            }
+          }
+        },
+        "success": false,
+        "error": "TARGET_NOT_FOUND"
+      },
+      {
+        "index": 8,
+        "observation": {
+          "url": "http://localhost:4173/member/12345",
+          "title": "Member Detail",
+          "visibleText": "LEGACYCORE MEMBER SERVICING CONSOLE\nSESSION: ACTIVE\nMEMBER DETAIL\nMember #\t12345\nName\tAlice Carter\nStatus\tACTIVE\nF2 ACCOUNTS\nF4 HISTORY\nF8 NOTES\nF1 Help   F9 Menu   F12 Exit"
+        },
+        "decision": {
+          "reasoningSummary": "Open the workflow for creating a new sub-account.",
+          "action": {
+            "type": "click",
+            "target": {
+              "strategies": [
+                {
+                  "type": "role",
+                  "role": "button",
+                  "name": "OPEN NEW SUB-ACCOUNT"
+                },
+                {
+                  "type": "text",
+                  "value": "OPEN NEW SUB-ACCOUNT"
+                }
+              ]
+            }
+          }
+        },
+        "success": false,
+        "error": "TARGET_NOT_FOUND"
+      },
+      {
+        "index": 9,
+        "observation": {
+          "url": "http://localhost:4173/member/12345",
+          "title": "Member Detail",
+          "visibleText": "LEGACYCORE MEMBER SERVICING CONSOLE\nSESSION: ACTIVE\nMEMBER DETAIL\nMember #\t12345\nName\tAlice Carter\nStatus\tACTIVE\nF2 ACCOUNTS\nF4 HISTORY\nF8 NOTES\nF1 Help   F9 Menu   F12 Exit"
+        },
+        "decision": {
+          "reasoningSummary": "Open the workflow for creating a new sub-account.",
+          "action": {
+            "type": "click",
+            "target": {
+              "strategies": [
+                {
+                  "type": "role",
+                  "role": "button",
+                  "name": "OPEN NEW SUB-ACCOUNT"
+                },
+                {
+                  "type": "text",
+                  "value": "OPEN NEW SUB-ACCOUNT"
+                }
+              ]
+            }
+          }
+        },
+        "success": false,
+        "error": "TARGET_NOT_FOUND"
+      },
+      {
+        "index": 10,
+        "observation": {
+          "url": "http://localhost:4173/member/12345",
+          "title": "Member Detail",
+          "visibleText": "LEGACYCORE MEMBER SERVICING CONSOLE\nSESSION: ACTIVE\nMEMBER DETAIL\nMember #\t12345\nName\tAlice Carter\nStatus\tACTIVE\nF2 ACCOUNTS\nF4 HISTORY\nF8 NOTES\nF1 Help   F9 Menu   F12 Exit"
+        },
+        "decision": {
+          "reasoningSummary": "Open the workflow for creating a new sub-account.",
+          "action": {
+            "type": "click",
+            "target": {
+              "strategies": [
+                {
+                  "type": "role",
+                  "role": "button",
+                  "name": "OPEN NEW SUB-ACCOUNT"
+                },
+                {
+                  "type": "text",
+                  "value": "OPEN NEW SUB-ACCOUNT"
+                }
+              ]
+            }
+          }
+        },
+        "success": false,
+        "error": "TARGET_NOT_FOUND"
+      },
+      {
+        "index": 11,
+        "observation": {
+          "url": "http://localhost:4173/member/12345",
+          "title": "Member Detail",
+          "visibleText": "LEGACYCORE MEMBER SERVICING CONSOLE\nSESSION: ACTIVE\nMEMBER DETAIL\nMember #\t12345\nName\tAlice Carter\nStatus\tACTIVE\nF2 ACCOUNTS\nF4 HISTORY\nF8 NOTES\nF1 Help   F9 Menu   F12 Exit"
+        },
+        "decision": {
+          "reasoningSummary": "Open the workflow for creating a new sub-account.",
+          "action": {
+            "type": "click",
+            "target": {
+              "strategies": [
+                {
+                  "type": "role",
+                  "role": "button",
+                  "name": "OPEN NEW SUB-ACCOUNT"
+                },
+                {
+                  "type": "text",
+                  "value": "OPEN NEW SUB-ACCOUNT"
+                }
+              ]
+            }
+          }
+        },
+        "success": false,
+        "error": "TARGET_NOT_FOUND"
+      },
+      {
+        "index": 12,
+        "observation": {
+          "url": "http://localhost:4173/member/12345",
+          "title": "Member Detail",
+          "visibleText": "LEGACYCORE MEMBER SERVICING CONSOLE\nSESSION: ACTIVE\nMEMBER DETAIL\nMember #\t12345\nName\tAlice Carter\nStatus\tACTIVE\nF2 ACCOUNTS\nF4 HISTORY\nF8 NOTES\nF1 Help   F9 Menu   F12 Exit"
+        },
+        "decision": {
+          "reasoningSummary": "Open the workflow for creating a new sub-account.",
+          "action": {
+            "type": "click",
+            "target": {
+              "strategies": [
+                {
+                  "type": "role",
+                  "role": "button",
+                  "name": "OPEN NEW SUB-ACCOUNT"
+                },
+                {
+                  "type": "text",
+                  "value": "OPEN NEW SUB-ACCOUNT"
+                }
+              ]
+            }
+          }
+        },
+        "success": false,
+        "error": "TARGET_NOT_FOUND"
+      },
+      {
+        "index": 13,
+        "observation": {
+          "url": "http://localhost:4173/member/12345",
+          "title": "Member Detail",
+          "visibleText": "LEGACYCORE MEMBER SERVICING CONSOLE\nSESSION: ACTIVE\nMEMBER DETAIL\nMember #\t12345\nName\tAlice Carter\nStatus\tACTIVE\nF2 ACCOUNTS\nF4 HISTORY\nF8 NOTES\nF1 Help   F9 Menu   F12 Exit"
+        },
+        "decision": {
+          "reasoningSummary": "Open the workflow for creating a new sub-account.",
+          "action": {
+            "type": "click",
+            "target": {
+              "strategies": [
+                {
+                  "type": "role",
+                  "role": "button",
+                  "name": "OPEN NEW SUB-ACCOUNT"
+                },
+                {
+                  "type": "text",
+                  "value": "OPEN NEW SUB-ACCOUNT"
+                }
+              ]
+            }
+          }
+        },
+        "success": false,
+        "error": "TARGET_NOT_FOUND"
+      },
+      {
+        "index": 14,
+        "observation": {
+          "url": "http://localhost:4173/member/12345",
+          "title": "Member Detail",
+          "visibleText": "LEGACYCORE MEMBER SERVICING CONSOLE\nSESSION: ACTIVE\nMEMBER DETAIL\nMember #\t12345\nName\tAlice Carter\nStatus\tACTIVE\nF2 ACCOUNTS\nF4 HISTORY\nF8 NOTES\nF1 Help   F9 Menu   F12 Exit"
+        },
+        "decision": {
+          "reasoningSummary": "Open the workflow for creating a new sub-account.",
+          "action": {
+            "type": "click",
+            "target": {
+              "strategies": [
+                {
+                  "type": "role",
+                  "role": "button",
+                  "name": "OPEN NEW SUB-ACCOUNT"
+                },
+                {
+                  "type": "text",
+                  "value": "OPEN NEW SUB-ACCOUNT"
+                }
+              ]
+            }
+          }
+        },
+        "success": false,
+        "error": "TARGET_NOT_FOUND"
+      },
+      {
+        "index": 15,
+        "observation": {
+          "url": "http://localhost:4173/member/12345",
+          "title": "Member Detail",
+          "visibleText": "LEGACYCORE MEMBER SERVICING CONSOLE\nSESSION: ACTIVE\nMEMBER DETAIL\nMember #\t12345\nName\tAlice Carter\nStatus\tACTIVE\nF2 ACCOUNTS\nF4 HISTORY\nF8 NOTES\nF1 Help   F9 Menu   F12 Exit"
+        },
+        "decision": {
+          "reasoningSummary": "Open the workflow for creating a new sub-account.",
+          "action": {
+            "type": "click",
+            "target": {
+              "strategies": [
+                {
+                  "type": "role",
+                  "role": "button",
+                  "name": "OPEN NEW SUB-ACCOUNT"
+                },
+                {
+                  "type": "text",
+                  "value": "OPEN NEW SUB-ACCOUNT"
+                }
+              ]
+            }
+          }
+        },
+        "success": false,
+        "error": "TARGET_NOT_FOUND"
+      },
+      {
+        "index": 16,
+        "observation": {
+          "url": "http://localhost:4173/member/12345",
+          "title": "Member Detail",
+          "visibleText": "LEGACYCORE MEMBER SERVICING CONSOLE\nSESSION: ACTIVE\nMEMBER DETAIL\nMember #\t12345\nName\tAlice Carter\nStatus\tACTIVE\nF2 ACCOUNTS\nF4 HISTORY\nF8 NOTES\nF1 Help   F9 Menu   F12 Exit"
+        },
+        "decision": {
+          "reasoningSummary": "Open the workflow for creating a new sub-account.",
+          "action": {
+            "type": "click",
+            "target": {
+              "strategies": [
+                {
+                  "type": "role",
+                  "role": "button",
+                  "name": "OPEN NEW SUB-ACCOUNT"
+                },
+                {
+                  "type": "text",
+                  "value": "OPEN NEW SUB-ACCOUNT"
+                }
+              ]
+            }
+          }
+        },
+        "success": false,
+        "error": "TARGET_NOT_FOUND"
+      },
+      {
+        "index": 17,
+        "observation": {
+          "url": "http://localhost:4173/member/12345",
+          "title": "Member Detail",
+          "visibleText": "LEGACYCORE MEMBER SERVICING CONSOLE\nSESSION: ACTIVE\nMEMBER DETAIL\nMember #\t12345\nName\tAlice Carter\nStatus\tACTIVE\nF2 ACCOUNTS\nF4 HISTORY\nF8 NOTES\nF1 Help   F9 Menu   F12 Exit"
+        },
+        "decision": {
+          "reasoningSummary": "Open the workflow for creating a new sub-account.",
+          "action": {
+            "type": "click",
+            "target": {
+              "strategies": [
+                {
+                  "type": "role",
+                  "role": "button",
+                  "name": "OPEN NEW SUB-ACCOUNT"
+                },
+                {
+                  "type": "text",
+                  "value": "OPEN NEW SUB-ACCOUNT"
+                }
+              ]
+            }
+          }
+        },
+        "success": false,
+        "error": "TARGET_NOT_FOUND"
+      },
+      {
+        "index": 18,
+        "observation": {
+          "url": "http://localhost:4173/member/12345",
+          "title": "Member Detail",
+          "visibleText": "LEGACYCORE MEMBER SERVICING CONSOLE\nSESSION: ACTIVE\nMEMBER DETAIL\nMember #\t12345\nName\tAlice Carter\nStatus\tACTIVE\nF2 ACCOUNTS\nF4 HISTORY\nF8 NOTES\nF1 Help   F9 Menu   F12 Exit"
+        },
+        "decision": {
+          "reasoningSummary": "Open the workflow for creating a new sub-account.",
+          "action": {
+            "type": "click",
+            "target": {
+              "strategies": [
+                {
+                  "type": "role",
+                  "role": "button",
+                  "name": "OPEN NEW SUB-ACCOUNT"
+                },
+                {
+                  "type": "text",
+                  "value": "OPEN NEW SUB-ACCOUNT"
+                }
+              ]
+            }
+          }
+        },
+        "success": false,
+        "error": "TARGET_NOT_FOUND"
+      },
+      {
+        "index": 19,
+        "observation": {
+          "url": "http://localhost:4173/member/12345",
+          "title": "Member Detail",
+          "visibleText": "LEGACYCORE MEMBER SERVICING CONSOLE\nSESSION: ACTIVE\nMEMBER DETAIL\nMember #\t12345\nName\tAlice Carter\nStatus\tACTIVE\nF2 ACCOUNTS\nF4 HISTORY\nF8 NOTES\nF1 Help   F9 Menu   F12 Exit"
+        },
+        "decision": {
+          "reasoningSummary": "Open the workflow for creating a new sub-account.",
+          "action": {
+            "type": "click",
+            "target": {
+              "strategies": [
+                {
+                  "type": "role",
+                  "role": "button",
+                  "name": "OPEN NEW SUB-ACCOUNT"
+                },
+                {
+                  "type": "text",
+                  "value": "OPEN NEW SUB-ACCOUNT"
+                }
+              ]
+            }
+          }
+        },
+        "success": false,
+        "error": "TARGET_NOT_FOUND"
+      }
+    ],
+    "message": "DISCOVERY_STEP_LIMIT_REACHED: 20"
+  }
+}

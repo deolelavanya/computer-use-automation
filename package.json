@@ -1,0 +1,34 @@
+{
+  "name": "computer-use-automation",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start:legacy": "npm run build && node dist/apps/legacy-core/src/server.js",
+    "typecheck": "tsc --noEmit",
+    "validate:artifact": "npm run build && node dist/tests/artifact-schema.test.js",
+    "test:surface": "npm run build && node dist/tests/surface.test.js",
+    "test:replay": "npm run build && node dist/tests/replay.test.js",
+    "test:business-outcome": "npm run build && node dist/tests/business-outcome.test.js",
+    "test:approval-gate": "npm run build && node dist/tests/approval-gate.test.js",
+    "test:resume": "npm run build && node dist/tests/resume.test.js",
+    "test:checkpoint-session": "npm run build && node dist/tests/checkpoint-session.test.js",
+    "test:handoff": "npm run build && node dist/tests/handoff.test.js",
+    "test:human-in-loop": "npm run build && node dist/tests/human-in-loop.test.js",
+    "test:discovery": "npm run build && node dist/tests/discovery.test.js",
+    "test:discovery-scripted": "npm run build && node dist/tests/discovery-scripted.test.js",
+    "test:artifact-compiler": "npm run build && node dist/tests/artifact-compiler.test.js",
+    "test:discovery-gemini": "npm run build && node dist/tests/discovery-gemini.test.js"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "@google/genai": "^2.18.0",
+    "openai": "^7.5.0",
+    "playwright": "^1.62.1",
+    "zod": "^4.4.3"
+  }
+}

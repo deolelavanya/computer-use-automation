@@ -1,0 +1,32 @@
+{
+  "sessionId": "pw-1787186784408",
+  "capabilityId": "legacycore.open-savings-subaccount",
+  "events": [
+    {
+      "type": "replay_started",
+      "timestamp": "2026-08-20T00:46:27.728Z",
+      "sessionId": "pw-1787186784408",
+      "capabilityId": "legacycore.open-savings-subaccount"
+    },
+    {
+      "type": "approval_granted",
+      "timestamp": "2026-08-20T00:46:27.728Z",
+      "stepId": "review.confirm-open"
+    },
+    {
+      "type": "step_started",
+      "timestamp": "2026-08-20T00:46:27.728Z",
+      "stepId": "review.confirm-open"
+    },
+    {
+      "type": "step_completed",
+      "timestamp": "2026-08-20T00:46:27.834Z",
+      "stepId": "review.confirm-open"
+    },
+    {
+      "type": "replay_succeeded",
+      "timestamp": "2026-08-20T00:46:27.900Z",
+      "evidenceRef": "evidence/runtime/pw-1787186784408-004.png"
+    }
+  ]
+}

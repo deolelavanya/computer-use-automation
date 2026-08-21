@@ -1,0 +1,23 @@
+{
+  "sessionId": "pw-1787335336201",
+  "capabilityId": "legacycore.open-savings-subaccount",
+  "events": [
+    {
+      "type": "replay_started",
+      "timestamp": "2026-08-21T18:02:16.202Z",
+      "sessionId": "pw-1787335336201",
+      "capabilityId": "legacycore.open-savings-subaccount"
+    },
+    {
+      "type": "step_started",
+      "timestamp": "2026-08-21T18:02:16.202Z",
+      "stepId": "search.fill-member-id"
+    },
+    {
+      "type": "replay_failed",
+      "timestamp": "2026-08-21T18:02:18.114Z",
+      "code": "TARGET_RESOLUTION_FAILED",
+      "stepId": "search.fill-member-id"
+    }
+  ]
+}

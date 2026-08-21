@@ -1,0 +1,18 @@
+body { margin: 0; background: #d6d6c8; font-family: "Courier New", monospace; color: #111; }
+.terminal-shell { width: 900px; margin: 24px auto; border: 3px solid #333; background: #f4f1dc; box-shadow: 8px 8px 0 #777; }
+.topbar, .footer { background: #1b1b1b; color: #f5f1bd; padding: 10px 14px; font-weight: bold; }
+.topbar span { float: right; }
+.content { min-height: 520px; padding: 22px; }
+h1 { font-size: 22px; border-bottom: 2px solid #333; padding-bottom: 8px; }
+.legacy-table { border-collapse: collapse; width: 100%; margin: 18px 0; }
+.legacy-table td, .legacy-table th { border: 1px solid #444; padding: 10px; text-align: left; }
+.form-table { width: 70%; }
+input, select { font-family: inherit; padding: 7px; border: 2px inset #aaa; margin-right: 8px; }
+input[type="submit"], .legacy-button { background: #d8d8cc; border: 2px outset #eee; color: #111; text-decoration: none; padding: 8px 12px; display: inline-block; cursor: pointer; }
+.legacy-button.muted { opacity: .55; }
+.button-row { margin-top: 24px; display: flex; gap: 10px; }
+.message { border: 2px solid #333; padding: 12px; margin: 18px 0; font-weight: bold; }
+.error { background: #f2d1cc; }
+.warning { background: #f1e3a4; }
+.success { background: #d3ead0; }
+.hint { color: #444; }
